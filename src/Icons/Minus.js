@@ -1,3 +1,5 @@
+import React from "react";
+
 export function Minus(props) {
     return (
       <svg
