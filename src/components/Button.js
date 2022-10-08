@@ -43,7 +43,7 @@ transition: all 0.2s ease;
 const Button = ({text, link}) => {
   return (
     <Btn>
-        <a href={link} aria-label={text} target="_blank" rel="noreferrer">
+        <a href={link} aria-label={text} target="_blank" rel="noopener noreferrer">
             {text}
         </a>
     </Btn>

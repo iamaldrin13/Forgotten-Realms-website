@@ -1,40 +1,51 @@
 import React, { useRef } from 'react';
 import styled, { keyframes } from "styled-components";
 
-import img1 from '../../assets/Nfts/bighead.svg';
-import img2 from '../../assets/Nfts/bighead-1.svg';
-import img3 from '../../assets/Nfts/bighead-2.svg';
-import img4 from '../../assets/Nfts/bighead-3.svg';
-import img5 from '../../assets/Nfts/bighead-4.svg';
-import img6 from '../../assets/Nfts/bighead-5.svg';
-import img7 from '../../assets/Nfts/bighead-6.svg';
-import img8 from '../../assets/Nfts/bighead-7.svg';
-import img9 from '../../assets/Nfts/bighead-8.svg';
-import img10 from '../../assets/Nfts/bighead-9.svg';
+
+import img1 from '../../assets/Nfts/wBGr/Valk1.png';
+import img2 from '../../assets/Nfts/wBGr/DarkFae1.png';
+import img3 from '../../assets/Nfts/wBGr/Vamp1.png';
+import img4 from '../../assets/Nfts/wBGr/Elf1.png';
+import img5 from '../../assets/Nfts/wBGr/Vamp2.png';
+import img6 from '../../assets/Nfts/wBGr/Elf2.png';
+import img7 from '../../assets/Nfts/wBGr/DarkFae2.png';
+import img8 from '../../assets/Nfts/wBGr/Valk2.png';
+import img9 from '../../assets/Nfts/wBGr/Elf3.png';
+import img10 from '../../assets/Nfts/wBGr/Valk3.png';
 import ETH from '../../assets/icons8-ethereum-48.png';
 
 const Section = styled.section`
 min-height: 100vh;
-width: 140vw;
+width: 100%;
 background-color: ${props => props.theme.text};
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 position: relative;
+overflow: hidden;
 
 &>*:first-child{
   animation-duration: 20s;
+
+  @media (max-width: 30em) {
+    animation-duration: 15s;
+  }
 }
 
 &>*:last-child{
   animation-duration: 15s;
+
+  @media (max-width: 30em) {
+    animation-duration: 10s;
+  }
 }
 `
 
 const move = keyframes`
 0%{transform: translateX(100%)};
-100%{transform: translateX(-150%)};
+100%{transform: translateX(-300%)};
+
 
 `
 
@@ -52,15 +63,26 @@ animation: ${move} linear infinite ${props => props.direction};
 
 const ImgContainer = styled.div`
 width: 15rem;
+padding: 0.3rem;
 margin: 0 1rem;
-background-color: ${props => props.theme.body};
+background-color: ${props => props.theme.carouselColor};
 
-border-radius: 20px;
+border-radius: 30px;
 cursor: pointer;
+
+@media (max-width: 48em) {
+    width: 12rem;
+  }
+
+  @media (max-width: 30em) {
+    width: 10rem;
+  }
 
 img{
   width: 100%;
   height: auto;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 `
@@ -71,10 +93,10 @@ display: flex;
 justify-content: space-between;
 padding: 0.8rem 1rem;
 background-color: ${props => props.theme.text};
-border: 2px solid ${props => `rgba(${props.theme.bodyRgba}, 0.5)`};
+border: 3px solid ${props => `rgba(${props.theme.bodyRgba}, 0.5)`};
 
-border-bottom-left-radius: 20px;
-border-bottom-right-radius: 20px;
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
 
 span{
   font-size: ${props => props.theme.fontsm};
@@ -88,6 +110,11 @@ h1{
   font-size: ${props => props.theme.fontmd};
   color: ${props => props.theme.body};
   font-weight: 600;
+
+  @media (max-width: 30em) {
+    font-size: ${props => props.theme.fontsm};
+  }
+
 }
 `
 
@@ -115,7 +142,7 @@ const NftItem = ({name="", img, number=0, price=0, passRef}) => {
 
   return(
     <ImgContainer onMouseOver={ e=> pause(e)} onMouseOut={ e=> play(e)}>
-      <img src={img} alt = "The Weirdos" />
+      <img src={img} alt = "The Forgotten" />
       <Details>
       <div>
         <span>{name}</span> <br />
@@ -143,22 +170,26 @@ const Showcase = () => {
   const Row2Ref = useRef(null);
 
   return (
-    <Section>
+    
+    <Section id= "showcase">
+      
       <Row direction="none" ref={Row1Ref}>
+        
        <NftItem name={"Valkyrie"} img={img1} number={888} price={1.5}  passRef = {Row1Ref}/>
        <NftItem name={"DarkFae"} img={img2} number={332} price={6.5}  passRef = {Row1Ref}/>
        <NftItem name={"Vampyre"} img={img3} number={452} price={3.5}  passRef = {Row1Ref}/>
-       <NftItem name={"Valkyrie"} img={img4} number={632} price={4.5}  passRef = {Row1Ref}/>
-       <NftItem name={"Elf"} img={img5} number={654} price={1.1}  passRef = {Row1Ref}/>
+       <NftItem name={"Elf"} img={img4} number={632} price={4.5}  passRef = {Row1Ref}/>
+       <NftItem name={"Vampyre"} img={img5} number={654} price={1.1}  passRef = {Row1Ref}/>
       </Row>
 
       <Row direction="reverse" ref={Row2Ref}>
-      <NftItem name={"Vampyre"} img={img6} number={545} price={1.9}  passRef = {Row2Ref}/>
-       <NftItem name={"Valkyrie"} img={img7} number={614} price={1.1}  passRef = {Row2Ref}/>
-       <NftItem name={"DarkFae"} img={img8} number={64} price={1.3}  passRef = {Row2Ref}/>
-       <NftItem name={"Elf"} img={img9} number={32} price={1.6}  passRef = {Row2Ref}/>
-       <NftItem name={"Vampyre"} img={img10} number={21} price={0.5}  passRef = {Row2Ref}/>
+      <NftItem name={"Elf"} img={img6} number={545} price={1.9}  passRef = {Row2Ref}/>
+       <NftItem name={"Dark Fae"} img={img7} number={614} price={1.1}  passRef = {Row2Ref}/>
+       <NftItem name={"Vampyre"} img={img8} number={64} price={1.3}  passRef = {Row2Ref}/>
+       <NftItem name={"Dark Fae"} img={img9} number={32} price={1.6}  passRef = {Row2Ref}/>
+       <NftItem name={"Dark Fae"} img={img10} number={21} price={2.5}  passRef = {Row2Ref}/>
       </Row>
+      
     </Section>
   )
 }

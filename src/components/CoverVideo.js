@@ -1,15 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-import GIF from '../assets/Home Video.mp4'
+import GIF from '../assets/Home GIF.gif'
 
 
 
 const VideoContainer = styled.div`
 width: 100%;
 
-video{
+img{
     width: 100%;
     height: auto;
+    border-radius: 25px;
+   
+}
+
+@media (max-width: 64em) {
+
+  min-width: 40vh;
+  
 }
 
 `
@@ -17,7 +25,7 @@ video{
 const CoverVideo = () => {
   return (
     <VideoContainer>
-        <video src= {GIF} type="video/mp4" autoPlay muted loop/>
+        <img src= {GIF} type="gif" alt= "Forgotten Entities" autoPlay muted loop/>
     </VideoContainer>
   )
 }

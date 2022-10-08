@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from './Button';
 
-import img1 from '../assets/Nfts/bighead.svg';
-import img2 from '../assets/Nfts/bighead-1.svg';
-import img3 from '../assets/Nfts/bighead-2.svg';
-import img4 from '../assets/Nfts/bighead-3.svg';
-import img5 from '../assets/Nfts/bighead-4.svg';
-import img6 from '../assets/Nfts/bighead-5.svg';
+
+import img1 from '../assets/Nfts/noBGr/Valk4.png';
+import img2 from '../assets/Nfts/noBGr/Fae4.png';
+import img3 from '../assets/Nfts/noBGr/Vamp1.png';
+import img4 from '../assets/Nfts/noBGr/Elf5.png';
+import img5 from '../assets/Nfts/noBGr/Vamp2.png';
+import img6 from '../assets/Nfts/noBGr/Elf3.png';
+
 
 
 const Section = styled.section`
@@ -24,6 +25,12 @@ align-items: center;
 
 
 overflow: hidden;
+
+@media (max-width: 48em) {
+  height: 15rem;
+  flex-direction: column;
+
+}
 `
 
 const ImgContainer= styled.div`
@@ -43,6 +50,14 @@ img{
     width: 15rem;
     height: auto;
 }
+
+@media (max-width: 48em) {
+    img{
+    width: 10rem;
+    height: auto;
+}
+
+}
 `
 
 
@@ -55,12 +70,30 @@ width: 35%;
 text-transform: capitalize;
 
 text-shadow: 1px 1px 2px ${props => props.theme.text};
+
+
+@media (max-width: 64em) {
+    width: 40%;
+    font-size: ${props => props.theme.fontxxl};
+    text-align: center;
+}
+
+@media (max-width: 48em) {
+    width: 100%;
+    font-size: ${props => props.theme.fontxl};
+    padding: 2rem 0;
+}
 `
 
 const BtnContainer = styled.div`
 width: 35%;
 display: flex;
 justify-content: flex-end;
+
+@media (max-width: 48em) {
+    width: 100%;
+    justify-content: center;
+}
 
 ` 
 
@@ -77,6 +110,15 @@ border-radius: 50px;
 cursor: pointer;
 transition: all 0.2s ease;
 position: relative;
+
+@media (max-width: 48em) {
+    padding: 1rem 2rem;
+}
+
+@media (max-width: 30em) {
+    padding: 0.5rem 2rem;
+    font-size: ${props => props.theme.fontsm};
+}
 
 &:hover{
     transform: scale(0.9);

@@ -6,7 +6,8 @@ import Accordion from '../Accordion'
 
 const Section = styled.section`
 min-height: 100vh;
-width: 100%;
+width: 100vw;
+height: auto;
 background-color: ${props => props.theme.text};
 position: relative;
 color: ${(props) => props.theme.body};
@@ -26,6 +27,10 @@ margin: 1rem auto;
 border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
 
+@media (max-width: 48em) {
+  font-size: ${(props) => props.theme.fontxl};
+}
+
 `
 
 const Container = styled.div`
@@ -35,10 +40,32 @@ margin: 2rem auto;
 display: flex;
 justify-content: space-between;
 align-content: center;
+
+@media (max-width: 64em) {
+  width: 80%;
+
+}
+@media (max-width: 48em) {
+  width: 90%;
+  flex-direction: column;
+
+  &>*:last-child{
+    &>*:first-child{
+
+      margin-top: 0;
+    }
+  }
+
+}
+
 `
 
 const Box = styled.div`
 width: 45%;
+@media (max-width: 64em) {
+  width: 90%;
+  align-self: center;
+}
 `
 
 const Faq = () => {
@@ -66,9 +93,9 @@ const Faq = () => {
   }, [])
 
   return (
-    <Section ref = {ref}>
+    <Section ref = {ref} id= "faq">
       <Title>
-      Faq
+      FAQ
       </Title>
       <Container>
         <Box>

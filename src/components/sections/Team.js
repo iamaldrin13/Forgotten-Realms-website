@@ -2,16 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import ConfettiComponent from '../Confetti';
 
-import img1 from '../../assets/Nfts/bighead.svg';
-import img2 from '../../assets/Nfts/bighead-1.svg';
-import img3 from '../../assets/Nfts/bighead-2.svg';
-import img4 from '../../assets/Nfts/bighead-3.svg';
-import img5 from '../../assets/Nfts/bighead-4.svg';
-import img6 from '../../assets/Nfts/bighead-5.svg';
-import img7 from '../../assets/Nfts/bighead-6.svg';
-import img8 from '../../assets/Nfts/bighead-7.svg';
-import img9 from '../../assets/Nfts/bighead-8.svg';
-import img10 from '../../assets/Nfts/bighead-9.svg';
+import img1 from '../../assets/Nfts/Aesir2.png';
+import img2 from '../../assets/Nfts/Aesir4.png';
+import img3 from '../../assets/Nfts/Aesir3.png';
+import img4 from '../../assets/Nfts/Aesir1.png';
+import img5 from '../../assets/Nfts/Head.png';
+import img6 from '../../assets/Nfts/Mod1.png';
+import img7 from '../../assets/Nfts/Mod2.png';
+import img8 from '../../assets/Nfts/Mod3.png';
+import img9 from '../../assets/Nfts/Mod4.png';
+import img10 from '../../assets/Nfts/noBGr/Fae1.png';
 
 
 const Section = styled.section`
@@ -32,6 +32,10 @@ margin: 1rem auto;
 border-bottom: 2px solid ${(props) => props.theme.text};
 width: fit-content;
 
+@media (max-width: 40em) {
+  font-size: ${(props) => props.theme.fontxl};
+}
+
 `
 
 const Container = styled.div`
@@ -42,15 +46,25 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 flex-wrap: wrap;
+
+@media (max-width: 64em) {
+  width: 80%;
+}
+
+@media (max-width: 48em) {
+  width: 90%;
+  justify-content: center;
+}
 `
 
 const Item = styled.div`
 width: calc(20rem-4vw);
-padding: 1rem 0;
+padding: 1rem 1rem;
 color: ${props => props.theme.body};
 margin: 2rem 1rem;
 position: relative;
 z-index: 5; //places the items on top
+justify-content: center;
 
 backdrop-filter: blur(4px);
 
@@ -64,18 +78,24 @@ border-radius: 20px;
   }
 }
 
+@media (max-width: 30em) {
+  
+  width: 100%;
+}
 `
 
 
 const ImageContainer = styled.div`
-width: 80%;
+width: 20rem;
 margin: 0 auto;
 background-color: ${props => props.theme.carouselColor};
 border: 1px solid ${props => props.theme.text};
-padding: 1rem;
+padding: 1rem 1rem 1rem;
 
 border-radius: 20px;
 cursor: pointer;
+
+
 
 img{
   width: 100%;
@@ -129,19 +149,19 @@ const MemberComponent = ({img, name = " ", position = " "}) => {
 
 const Team = () => {
   return (
-    <Section>
+    <Section id= "team">
       <ConfettiComponent />
       <Title>Team</Title>
       <Container>
-        <MemberComponent img={img1} name= "Freya" position="Developer & Founder" />
-        <MemberComponent img={img2} name= "Misseysi" position="Lead Artist & Co-founder" />
+        <MemberComponent img={img1} name= <a href="https://twitter.com/forgottennft_" target="_blank" rel="noopener noreferrer">Freya</a> position="Developer & Founder" />
+        <MemberComponent img={img2} name= <a href="https://twitter.com/Misseysi01" target="_blank" rel="noopener noreferrer">Misseysi</a> position="Lead Artist & Co-founder" />
         <MemberComponent img={img3} name= "NeverForget" position="Marketing & Network" />
         <MemberComponent img={img4} name= "Angela" position="Lead Artist" />
         <MemberComponent img={img5} name= "One" position="Head Moderator" />
         <MemberComponent img={img6} name= "Kousoke" position="Moderator & Games Manager" />
         <MemberComponent img={img7} name= "Queenza" position="Moderator & Events Manager" />
         <MemberComponent img={img8} name= "HappyVV" position="Moderator & Collab Manager" />
-        <MemberComponent img={img8} name= "Maikie" position="Moderator & Collab Manager" />
+        <MemberComponent img={img9} name= "Maikie" position="Moderator & Collab Manager" />
       </Container>
     </Section>
   )

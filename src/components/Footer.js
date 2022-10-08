@@ -30,6 +30,14 @@ align-items: center;
 
 border-bottom: 1px solid ${(props) => props.theme.text};
 
+@media (max-width: 48em) {
+  width: 90%;
+
+  h1{
+    font-size: ${(props) => props.theme.fontxxxl};
+  }
+}
+
 `
 
 const Left = styled.div`
@@ -37,6 +45,10 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
+@media (max-width: 48em) {
+  width: 100%;
+}
 `
 
 const IconList = styled.div`
@@ -61,6 +73,10 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(3, 1fr);
 grid-gap: 1rem;
+
+@media (max-width: 48em) {
+  display: none;
+}
 `
 
 const Item = styled.li`
@@ -95,10 +111,31 @@ a{
   text-decoration:underline;
 }
 
+@media (max-width: 48em) {
+  flex-direction: column;
+  width: 100%;
+
+  span{
+    margin-bottom: 1rem;
+  }
+}
+
 `
 
 
 const Footer = () => {
+
+  const scrollTo = (id) => {
+
+    let element = document.getElementById(id);
+
+    element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+    })
+}
+
   return (
     <Section>
       <Banner />
@@ -122,13 +159,13 @@ const Footer = () => {
           </IconList>
         </Left>
         <MenuItems>
-        <Item>Home</Item>
-        <Item>About</Item>
-        <Item>Roadmap</Item>
+        <Item onClick={() => scrollTo('home')}>Home</Item>
+        <Item onClick={() => scrollTo('about')}>About</Item>
+        <Item onClick={() => scrollTo('roadmap')}>Roadmap</Item>
 
-        <Item>Showcase</Item>
-        <Item>Team</Item>
-        <Item>Faq</Item>
+        <Item onClick={() => scrollTo('showcase')}>Showcase</Item>
+        <Item onClick={() => scrollTo('team')}>Team</Item>
+        <Item onClick={() => scrollTo('faq')}>Faq</Item>
         </MenuItems>
       </Container>
       <Bottom>
