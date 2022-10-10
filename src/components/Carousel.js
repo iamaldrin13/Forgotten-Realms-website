@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import 'swiper/swiper-bundle.css';
+import 'swiper/swiper-bundle.min.css';
 
 
  // Import Swiper React components
