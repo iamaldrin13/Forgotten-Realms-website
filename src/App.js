@@ -2,6 +2,7 @@ import GlobalStyles from './styles/GlobalStyles'
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import {light} from './styles/Themes';
+import 'swiper/swiper-bundle.css';
 
 
 import Navigation from './components/Navigation';
