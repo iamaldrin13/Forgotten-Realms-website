@@ -3,7 +3,6 @@ import styled, { ThemeProvider } from "styled-components";
 import Carousel from '../Carousel';
 import Button from '../Button';
 import {dark} from '../../styles/Themes';
-import ParticlesBG from "../ParticlesBG"
 
 const Section = styled.section`
 min-height: 100vh;
@@ -150,7 +149,7 @@ align-self: flex-start;
 const About = () => {
     return(
         <Section id= "about">
-            <ParticlesBG />
+            
             <Container>
                 <Box> <Carousel /> </Box>
                 <Box>
