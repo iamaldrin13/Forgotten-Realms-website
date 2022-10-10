@@ -11,7 +11,6 @@ import img6 from '../../assets/Nfts/Mod1.png';
 import img7 from '../../assets/Nfts/Mod2.png';
 import img8 from '../../assets/Nfts/Mod3.png';
 import img9 from '../../assets/Nfts/Mod4.png';
-import img10 from '../../assets/Nfts/noBGr/Fae1.png';
 
 
 const Section = styled.section`
@@ -125,14 +124,14 @@ color: ${props => `rgba(${props.theme.textRgba}, 0.9)`};
 font-weight: 400;
 `
 
-const Row = styled.div`
-/* background-color: lightblue; */
-white-space: nowrap;
-box-sizing: content-box;
-margin: 1rem auto;
-display: flex;
-
-`
+//const Row = styled.div`
+///* background-color: lightblue; */
+//white-space: nowrap;
+//box-sizing: content-box;
+//margin: 1rem auto;
+//display: flex;
+//
+//`
 
 const MemberComponent = ({img, name = " ", position = " "}) => {
   return (
