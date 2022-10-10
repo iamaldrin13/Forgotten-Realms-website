@@ -12,6 +12,15 @@ import img7 from '../../assets/Nfts/wBGr/DarkFae2.png';
 import img8 from '../../assets/Nfts/wBGr/Valk2.png';
 import img9 from '../../assets/Nfts/wBGr/Elf3.png';
 import img10 from '../../assets/Nfts/wBGr/Valk3.png';
+import img11 from '../../assets/Nfts/wBGr/Valk4.png';
+import img12 from '../../assets/Nfts/wBGr/DarkFae4.png';
+import img13 from '../../assets/Nfts/wBGr/Vamp3.png';
+import img14 from '../../assets/Nfts/wBGr/DarkFae3.png';
+import img15 from '../../assets/Nfts/wBGr/Vamp4.png';
+import img16 from '../../assets/Nfts/wBGr/Elf5.png';
+import img17 from '../../assets/Nfts/wBGr/Valk6.png';
+import img18 from '../../assets/Nfts/wBGr/Valk5.png';
+import img19 from '../../assets/Nfts/wBGr/Elf4.png';
 import ETH from '../../assets/icons8-ethereum-48.png';
 
 const Section = styled.section`
@@ -26,25 +35,25 @@ position: relative;
 overflow: hidden;
 
 &>*:first-child{
+  animation-duration: 25s;
+
+  @media (max-width: 30em) {
+    animation-duration: 20s;
+  }
+}
+
+&>*:last-child{
   animation-duration: 20s;
 
   @media (max-width: 30em) {
     animation-duration: 15s;
   }
 }
-
-&>*:last-child{
-  animation-duration: 15s;
-
-  @media (max-width: 30em) {
-    animation-duration: 10s;
-  }
-}
 `
 
 const move = keyframes`
 0%{transform: translateX(100%)};
-100%{transform: translateX(-300%)};
+100%{transform: translateX(-100%)};
 
 
 `
@@ -175,19 +184,29 @@ const Showcase = () => {
       
       <Row direction="none" ref={Row1Ref}>
         
-       <NftItem name={"Valkyrie"} img={img1} number={888} price={1.5}  passRef = {Row1Ref}/>
+       <NftItem name={"Valkyrie"} img={img1} number={888} price={3.5}  passRef = {Row1Ref}/>
        <NftItem name={"DarkFae"} img={img2} number={332} price={6.5}  passRef = {Row1Ref}/>
        <NftItem name={"Vampyre"} img={img3} number={452} price={3.5}  passRef = {Row1Ref}/>
        <NftItem name={"Elf"} img={img4} number={632} price={4.5}  passRef = {Row1Ref}/>
-       <NftItem name={"Vampyre"} img={img5} number={654} price={1.1}  passRef = {Row1Ref}/>
+       <NftItem name={"Vampyre"} img={img5} number={654} price={4.1}  passRef = {Row1Ref}/>
+       <NftItem name={"Valkyrie"} img={img11} number={521} price={3.9}  passRef = {Row1Ref}/>
+       <NftItem name={"Dark Fae"} img={img12} number={633} price={4.1}  passRef = {Row1Ref}/>
+       <NftItem name={"Vampyre"} img={img13} number={62} price={4.3}  passRef = {Row1Ref}/>
+       <NftItem name={"Dark Fae"} img={img14} number={323} price={3.6}  passRef = {Row1Ref}/>
+       <NftItem name={"Vampyre"} img={img15} number={211} price={2.6}  passRef = {Row1Ref}/>
       </Row>
 
       <Row direction="reverse" ref={Row2Ref}>
-      <NftItem name={"Elf"} img={img6} number={545} price={1.9}  passRef = {Row2Ref}/>
-       <NftItem name={"Dark Fae"} img={img7} number={614} price={1.1}  passRef = {Row2Ref}/>
-       <NftItem name={"Vampyre"} img={img8} number={64} price={1.3}  passRef = {Row2Ref}/>
-       <NftItem name={"Dark Fae"} img={img9} number={32} price={1.6}  passRef = {Row2Ref}/>
-       <NftItem name={"Dark Fae"} img={img10} number={21} price={2.5}  passRef = {Row2Ref}/>
+      <NftItem name={"Elf"} img={img6} number={545} price={3.9}  passRef = {Row2Ref}/>
+       <NftItem name={"Dark Fae"} img={img7} number={614} price={3.1}  passRef = {Row2Ref}/>
+       <NftItem name={"Valkyrie"} img={img8} number={64} price={3.3}  passRef = {Row2Ref}/>
+       <NftItem name={"Elf"} img={img9} number={32} price={4.6}  passRef = {Row2Ref}/>
+       <NftItem name={"Valkyrie"} img={img10} number={21} price={2.5}  passRef = {Row2Ref}/>
+       <NftItem name={"Elf"} img={img16} number={95} price={3.9}  passRef = {Row2Ref}/>
+       <NftItem name={"Valkyrie"} img={img17} number={644} price={4.1}  passRef = {Row2Ref}/>
+       <NftItem name={"Valkyrie"} img={img18} number={77} price={4.3}  passRef = {Row2Ref}/>
+       <NftItem name={"Elf"} img={img19} number={313} price={4.6}  passRef = {Row2Ref}/>
+       
       </Row>
       
     </Section>
