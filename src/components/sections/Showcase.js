@@ -26,7 +26,7 @@ import ETH from '../../assets/icons8-ethereum-48.png';
 const Section = styled.section`
 min-height: 100vh;
 width: 100%;
-background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.9)`};
+background-color: ${props => props.theme.showcase};
 display: flex;
 flex-direction: column;
 justify-content: center;

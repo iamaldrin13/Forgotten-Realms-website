@@ -4,6 +4,7 @@ export const light = {
     text:"#2a2a3d", //dark
     bodyRgba : "42, 42, 61", //dark
     textRgba : "255, 255, 255", //light
+    showcase: "#05011a",
 
     carouselColor : "#e7defa",
 

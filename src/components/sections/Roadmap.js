@@ -241,11 +241,14 @@ useLayoutEffect(() => {
          </SvgContainer>
          <Items>
           <Item>&nbsp;</Item> 
-          <RoadMapItem addToRef = {addToRefs} title="Genesis Launch" subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat." />
-          <RoadMapItem addToRef = {addToRefs} title="Valkyrie DAO" subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat." />
-          <RoadMapItem addToRef = {addToRefs} title="The Forgotten Realms" subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat." />
-          <RoadMapItem addToRef = {addToRefs} title="Community Events" subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat." />
-          <RoadMapItem addToRef = {addToRefs} title="Draug and the Einherjars" subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat." />
+          <RoadMapItem addToRef = {addToRefs} title="Genesis Launch" subtext="Official launch of Forgotten Entities, 
+          888 warring races of Dark Fae, Vampyres, Elves and Valkyries! 
+          The genesis collection will have EIGHT 1 of 1s! Benefits and utilities will be announced on Twitter and Discord!" />
+          <RoadMapItem addToRef = {addToRefs} title="Valkyrie DAO" subtext="DAO will be established, server restructured, holders exclusive benefits and community voting will be applied.
+           The community will choose which part of the original plans will be executed first. Plans will be revealed once DAO launches." />
+          <RoadMapItem addToRef = {addToRefs} title="The Forgotten Realms" subtext="Forgotten lands, the next phase of the Realms collection. These will be 1 of the benefits being a holder for the genesis collection. These lands will be another key to unlocking a different set of perks and utilities. Details will be discussed with the DAO." />
+          <RoadMapItem addToRef = {addToRefs} title="Community Events" subtext="Time to launch IRL events! Community meet ups will be organized by local representatives. Details will be discussed and DAO voting will be utilized." />
+          <RoadMapItem addToRef = {addToRefs} title="Draug and the Einherjars" subtext="Forgotten warriors. Ragnarok. Coming soon." />
 
          </Items>
       </Container>

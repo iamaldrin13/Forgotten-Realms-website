@@ -32,16 +32,16 @@ height: 60vh;
 
 @media (max-width: 70em) {
     
-    height: 60vh;
+    height: 100%;
 }
 
 @media (max-width: 64em) {
-    height: 50vh;
+    height: 90%;
     width: 30vw;
 }
 
 @media (max-width: 48em) {
-    height: 50vh;
+    height: 95%;
     width: 40vw;
 }
 

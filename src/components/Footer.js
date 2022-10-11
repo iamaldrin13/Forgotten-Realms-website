@@ -2,9 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Banner from './Banner'
 import Logo from './Logo'
-import Facebook from '../Icons/Facebook'
-import Instagram from '../Icons/Instagram'
-import LinkedIn from '../Icons/LinkedIn'
 import Twitter from '../Icons/Twitter'
 
 const Section = styled.section`
@@ -143,16 +140,8 @@ const Footer = () => {
         <Left>
           <Logo />
           <IconList>
-            <a href="https://facebook.com" target='_blank' rel="noopener noreferrer">
-              <Facebook />
-            </a>
-            <a href="https://Instagram.com" target='_blank' rel="noopener noreferrer">
-              <Instagram />
-            </a>
-            <a href="https://LinkedIn.com" target='_blank' rel="noopener noreferrer">
-              <LinkedIn />
-            </a>
-            <a href="https://Twitter.com" target='_blank' rel="noopener noreferrer">
+            
+            <a href="https://Twitter.com/ForgottenNFT_" target='_blank' rel="noopener noreferrer">
               <Twitter />
             </a>
 
