@@ -5,8 +5,8 @@ import styled from 'styled-components'
 
 const Btn = styled.button`
 display: inline-block;
-background-color: ${props => props.theme.text};
-color: ${props => props.theme.body};
+background-color: ${props => `rgba(${props.theme.bodyRgba}, 1)`};
+color: ${props => `rgba(${props.theme.textRgba}, 1.2)`};
 outline: none;
 border: none;
 
@@ -26,7 +26,7 @@ transition: all 0.2s ease;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%) scale(0);
-   border: 2px solid ${props => props.theme.text};
+   border: 2px solid ${props => `rgba(${props.theme.bodyRgba}, 1)`};
    width: 100%;
    height: 100%;
    border-radius: 50px;

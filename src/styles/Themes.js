@@ -1,11 +1,9 @@
-//This file contains variables for different Themes
-
 export const light = {
-
-    body:"#fff",
-    text:"#202020", //black shade
-    bodyRgba : "255,255,255",
-    textRgba : "32,32,32",
+    //white - purple theme
+    body:"#fff", //light
+    text:"#2a2a3d", //dark
+    bodyRgba : "42, 42, 61", //dark
+    textRgba : "220, 220, 222", //light
 
     carouselColor : "#e7defa",
 
@@ -18,19 +16,17 @@ export const light = {
     fontxxxl: '4em',
 
     fontButton:'0.875em',
-
-
 
     navHeight:'5rem',
 
 }
 
 export const dark = {
-
-    body:"#202020",
-    text:"#fff", //light shade
-    bodyRgba : "32,32,32",
-    textRgba : "255,255,255",
+    //purple - gray theme
+    body:"#474766", //dark
+    text:"#fff", //white
+    bodyRgba : "32,32,32", //black shade
+    textRgba : "193, 193, 245", //white
 
     carouselColor : "#e7defa",
 
@@ -43,8 +39,6 @@ export const dark = {
     fontxxxl: '4em',
 
     fontButton:'0.875em',
-
-
 
     navHeight:'5rem',
 

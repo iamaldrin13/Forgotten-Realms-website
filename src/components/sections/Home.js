@@ -11,6 +11,9 @@ min-height: ${props => `calc(100vh - ${props.theme.navHeight})`};
 width: 100vw;
 position: relative;
 background-color: ${props => props.theme.body};
+
+justify-content: center;
+align-items: center;
 `
 
 const Container = styled.div`
@@ -103,7 +106,7 @@ left: 50%;
 transform: translate(-50%, -50%);
 
 background-color: ${props => props.theme.text};
-color: ${props => props.theme.body};
+color: ${props => props.theme.body}; //arrow color
 font-size: ${props => props.theme.fontxl};
 
 @media (max-width: 64em) {

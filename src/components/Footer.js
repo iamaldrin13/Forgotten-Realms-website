@@ -172,9 +172,7 @@ const Footer = () => {
         <span>
           &copy; {new Date().getFullYear()} Valkyrie DAO. All rights reserved.
         </span>
-        <span>
-          Made with &#10084; by <a href="https://twitter.com/forgottennft_" target="_blank" rel="noopener noreferrer">Freya</a>
-        </span>
+        
       </Bottom>
     </Section>
   )

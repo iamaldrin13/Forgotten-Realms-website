@@ -93,14 +93,14 @@ display: flex;
 justify-content: space-between;
 padding: 0.8rem 1rem;
 background-color: ${props => props.theme.text};
-border: 3px solid ${props => `rgba(${props.theme.bodyRgba}, 0.5)`};
+border: 3px solid ${props => `rgba(${props.theme.textRgba}, 0.5)`};
 
 border-bottom-left-radius: 25px;
 border-bottom-right-radius: 25px;
 
 span{
   font-size: ${props => props.theme.fontsm};
-  color: ${props => `rgba(${props.theme.bodyRgba}, 0.5)`};
+  color: ${props => props.theme.text};
   font-weight: 600;
   line-height:1.5rem;
 
@@ -108,7 +108,7 @@ span{
 
 h1{
   font-size: ${props => props.theme.fontmd};
-  color: ${props => props.theme.body};
+  color: ${props => `rgba(${props.theme.textRgba}, 0.9)`};
   font-weight: 600;
 
   @media (max-width: 30em) {

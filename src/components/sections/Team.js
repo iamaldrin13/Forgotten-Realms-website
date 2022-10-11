@@ -110,7 +110,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 text-transform: uppercase;
-color: ${props => props.theme.text};
+color: ${props => `rgba(${props.theme.textRgba}, 0.9)`};
+font-weight: 600;
 margin-top: 1rem;
 `
 
@@ -120,7 +121,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 text-transform: capitalize ;
-color: ${props => `rgba(${props.theme.textRgba}, 0.9)`};
+color: ${props => `rgba(${props.theme.textRgba}, 0.7)`};
 font-weight: 400;
 `
 
@@ -154,13 +155,13 @@ const Team = () => {
       <Container>
         <MemberComponent img={img1} name= <a href="https://twitter.com/forgottennft_" target="_blank" rel="noopener noreferrer">Freya</a> position="Developer & Founder" />
         <MemberComponent img={img2} name= <a href="https://twitter.com/Misseysi01" target="_blank" rel="noopener noreferrer">Misseysi</a> position="Lead Artist & Co-founder" />
-        <MemberComponent img={img3} name= "NeverForget" position="Marketing & Network" />
-        <MemberComponent img={img4} name= "Angela" position="Lead Artist" />
-        <MemberComponent img={img5} name= "One" position="Head Moderator" />
-        <MemberComponent img={img6} name= "Kousoke" position="Moderator & Games Manager" />
-        <MemberComponent img={img7} name= "Queenza" position="Moderator & Events Manager" />
-        <MemberComponent img={img8} name= "HappyVV" position="Moderator & Collab Manager" />
-        <MemberComponent img={img9} name= "Maikie" position="Moderator & Collab Manager" />
+        <MemberComponent img={img3} name= <a href="https://twitter.com/forgottennft_" target="_blank" rel="noopener noreferrer">NeverForget</a> position="Marketing & Network" />
+        <MemberComponent img={img4} name= <a href="https://twitter.com/angela_artsph" target="_blank" rel="noopener noreferrer">Angela</a> position="Lead Artist" />
+        <MemberComponent img={img5} name= <a href="https://twitter.com/NotifyOne" target="_blank" rel="noopener noreferrer">One</a> position="Head Moderator" />
+        <MemberComponent img={img6} name= <a href="https://twitter.com/kousoke_nft" target="_blank" rel="noopener noreferrer">Kousoke</a> position="Moderator & Games Manager" />
+        <MemberComponent img={img7} name= <a href="https://twitter.com/ItsQueenza" target="_blank" rel="noopener noreferrer">Queenza</a> position="Moderator & Events Manager" />
+        <MemberComponent img={img8} name= <a href="https://twitter.com/Washappii23" target="_blank" rel="noopener noreferrer">HappyVV</a> position="Moderator & Collab Manager" />
+        <MemberComponent img={img9} name= <a href="https://twitter.com/maikie_nft" target="_blank" rel="noopener noreferrer">Maikie</a> position="Moderator & Collab Manager" />
       </Container>
     </Section>
   )

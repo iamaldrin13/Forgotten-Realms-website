@@ -6,6 +6,7 @@ import Button from "./Button";
 const Section = styled.section`
 width: 100vw;
 background-color: ${props => props.theme.body};
+
 `
 
 const Navbar = styled.nav`
@@ -49,7 +50,7 @@ list-style: none;
     width: 100vw;
     height: ${props => `calc(100vh - ${props.theme.navHeight})`};
     z-index: 50;
-    background-color:  ${props => `rgba(${props.theme.bodyRgba}, 0.85)`};
+    background-color:  ${props => `rgba(${props.theme.textRgba}, 0.85)`};
     backdrop-filter: blur(2px);
 
     transform: ${props => props.click ? 'translateY(0)' : 'translateY(1000%)'};
@@ -69,6 +70,7 @@ margin: 0 1rem;
 color: ${props => props.theme.text};
 cursor: pointer;
 
+
 &::after{
     content: ' ';
     display: block;
@@ -78,6 +80,7 @@ cursor: pointer;
     transition: width 0.3s ease;
 }
 
+
 &:hover::after{
     width: 100%;
 }
@@ -86,10 +89,6 @@ cursor: pointer;
     margin: 1rem 0;
 }
 
-//removes the drop down menu after clicking
-&::after{
-    display: none;
-}
 
 `
 
@@ -116,6 +115,9 @@ display:none;
 @media (max-width: 64em) {
     /* 1024 px */
     display: flex;
+    justify-content: center;
+align-items: center;
+
 }
 
 
@@ -126,6 +128,7 @@ display:none;
     right: ${props => props.click ? '-2px' : '0'};
     background: ${props => props.theme.text};
     position: absolute;
+    
 }
 
 &::after{
@@ -162,10 +165,11 @@ const Navigation = () => {
         <Section  id= "home">
             
             <Navbar>
-                <Logo />
-                <HamburgerMenu click={click} onClick={() => setclick(!click)}>
+            <HamburgerMenu click={click} onClick={() => setclick(!click)}>
                     &nbsp;
                 </HamburgerMenu>
+                <Logo />
+                
                 <Menu click={click}>
                     <MenuItem onClick={() => scrollTo('home')}>Home</MenuItem>
                     <MenuItem onClick={() => scrollTo('about')}>About</MenuItem>

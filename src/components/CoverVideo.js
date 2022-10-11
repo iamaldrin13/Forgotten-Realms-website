@@ -8,10 +8,10 @@ const VideoContainer = styled.div`
 width: 100%;
 
 img{
-    width: 100%;
+    width: 80%;
     height: auto;
-    border-radius: 25px;
-   
+    border-radius: 50px 0 50px 0;
+    border: 3px solid ${props => `rgba(${props.theme.bodyRgba}, 0.5)`};
 }
 
 @media (max-width: 64em) {
