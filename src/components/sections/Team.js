@@ -110,7 +110,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 text-transform: uppercase;
-color: ${props => `rgba(${props.theme.textRgba}, 0.9)`};
+color: ${props => `rgba(${props.theme.bodyRgba}, 0.9)`};
 font-weight: 600;
 margin-top: 1rem;
 `
@@ -121,7 +121,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 text-transform: capitalize ;
-color: ${props => `rgba(${props.theme.textRgba}, 0.7)`};
+color: ${props => `rgba(${props.theme.bodyRgba}, 0.7)`};
 font-weight: 400;
 `
 

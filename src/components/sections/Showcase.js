@@ -26,7 +26,7 @@ import ETH from '../../assets/icons8-ethereum-48.png';
 const Section = styled.section`
 min-height: 100vh;
 width: 100%;
-background-color: ${props => props.theme.text};
+background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.9)`};
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -35,25 +35,25 @@ position: relative;
 overflow: hidden;
 
 &>*:first-child{
+  animation-duration: 25s;
+
+  @media (max-width: 30em) {
+    animation-duration: 20s;
+  }
+}
+
+&>*:last-child{
   animation-duration: 20s;
 
   @media (max-width: 30em) {
     animation-duration: 15s;
   }
 }
-
-&>*:last-child{
-  animation-duration: 15s;
-
-  @media (max-width: 30em) {
-    animation-duration: 10s;
-  }
-}
 `
 
 const move = keyframes`
 0%{transform: translateX(100%)};
-100%{transform: translateX(-300%)};
+100%{transform: translateX(-100%)};
 
 
 `
@@ -102,14 +102,14 @@ display: flex;
 justify-content: space-between;
 padding: 0.8rem 1rem;
 background-color: ${props => props.theme.text};
-border: 3px solid ${props => `rgba(${props.theme.textRgba}, 0.5)`};
+border: 3px solid ${props => `rgba(${props.theme.bodyRgba}, 0.5)`};
 
 border-bottom-left-radius: 25px;
 border-bottom-right-radius: 25px;
 
 span{
   font-size: ${props => props.theme.fontsm};
-  color: ${props => props.theme.text};
+  color: ${props => `rgba(${props.theme.textRgba}, 0.8)`};
   font-weight: 600;
   line-height:1.5rem;
 
@@ -117,7 +117,7 @@ span{
 
 h1{
   font-size: ${props => props.theme.fontmd};
-  color: ${props => `rgba(${props.theme.textRgba}, 0.9)`};
+  color: ${props => props.theme.body};
   font-weight: 600;
 
   @media (max-width: 30em) {

@@ -18,7 +18,7 @@ position: relative;
 border-top: 2px solid ${props => props.theme.text};
 border-top: 2px solid ${props => props.theme.text};
 
-background-color: ${props => `rgba(${props.theme.textRgba}, 0.9)`};
+background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.9)`};
 display: flex;
 justify-content: center;
 align-items: center;
@@ -159,7 +159,7 @@ const Banner = () => {
         </ImgContainer>
         <Title>Join the <br /> Forgotten Realms </Title>
         <BtnContainer>
-        <JoinNow>
+        <JoinNow link="https://discord.gg/Ud8M89jf3d">
             Join Now
         </JoinNow>
         </BtnContainer>

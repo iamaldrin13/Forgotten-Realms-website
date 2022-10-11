@@ -64,7 +64,7 @@ align-items: center;
 const Title = styled.h2`
 font-size: ${(props) => props.theme.fontxxl};
 text-transform: capitalize;
-color: ${(props) => props.theme.body};
+color: ${props => `rgba(${props.theme.textRgba}, 0.9)`};
 align-self: flex-start;
 width: 80%;
 margin: 0 auto;
@@ -164,8 +164,8 @@ const About = () => {
                     With more than 200+ hand drawn traits, each NFT is unique and comes with a membership to an exclusive group of successful investors. Join an ambitious ever-growing community with multiple benefits and utilities.
                     </SubtextLight>
                     <ButtonContainer>
-                    <ThemeProvider theme={light}>
-                    <Button text="JOIN OUR DISCORD" link="#" />
+                    <ThemeProvider theme={dark}>
+                    <Button text="JOIN OUR DISCORD" link="https://discord.gg/Ud8M89jf3d" />
                     </ThemeProvider>
                     </ButtonContainer>
                 </Box>

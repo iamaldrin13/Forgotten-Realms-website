@@ -29,7 +29,7 @@ align-items: center;
 const Reveal = styled.div`
 display: ${props => props.clicked ? 'block' : 'none'};
 margin-top: 1rem;
-color: ${props => `rgba(${props.theme.bodyRgba}, 0.6)`};
+color: ${props => `rgba(${props.theme.textRgba}, 0.6)`};
 font-size: ${props => props.theme.fontsm};
 font-weight: 300;
 line-height: 1.1rem;

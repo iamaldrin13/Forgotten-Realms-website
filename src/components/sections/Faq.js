@@ -8,7 +8,7 @@ const Section = styled.section`
 min-height: 100vh;
 width: 100vw;
 height: auto;
-background-color: ${props => props.theme.text};
+background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.9)`};
 position: relative;
 color: ${(props) => props.theme.body};
 
@@ -21,7 +21,7 @@ flex-direction:column;
 const Title = styled.h1`
 font-size: ${(props) => props.theme.fontxxl};
 text-transform: capitalize;
-color: ${(props) => props.theme.body};
+color: ${props => `rgba(${props.theme.textRgba}, 0.9)`};
 
 margin: 1rem auto;
 border-bottom: 2px solid ${(props) => props.theme.body};
