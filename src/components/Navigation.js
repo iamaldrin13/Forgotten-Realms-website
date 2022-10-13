@@ -66,7 +66,7 @@ list-style: none;
 `
 
 const MenuItem = styled.li`
-margin: 0 1rem;
+margin: 0 1rem 1rem 1rem;
 color: ${props => props.theme.text};
 cursor: pointer;
 
@@ -87,6 +87,7 @@ cursor: pointer;
 
 @media (max-width: 64em) {
     margin: 1rem 0;
+    
 }
 
 
@@ -177,14 +178,12 @@ const Navigation = () => {
                     <MenuItem onClick={() => scrollTo('showcase')}>Showcase</MenuItem>
                     <MenuItem onClick={() => scrollTo('team')}>Team</MenuItem>
                     <MenuItem onClick={() => scrollTo('faq')}>Faq</MenuItem>
-                    <MenuItem>
-                        <div className= "mobile">
-                        <Button text="Connect Wallet" link="https://google.com"/>
+                    <div className= "mobile">
+                        <Button text="Time to Slay!" link="https://mint.forgottenrealm.xyz/"/>
                         </div>
-                    </MenuItem>
                 </Menu>
                 <div className= "desktop">
-                <Button text="Connect Wallet" link="https://google.com"/>
+                <Button text="Time to Slay!" link="https://mint.forgottenrealm.xyz/"/>
                 </div>
             </Navbar>
         </Section>

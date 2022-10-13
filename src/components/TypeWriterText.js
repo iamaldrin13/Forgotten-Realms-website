@@ -68,21 +68,23 @@ align-self: flex-start;
 
 `
 
-const ButtonContainer = styled.div`
-width: 80%;
-align-self: flex-start;
+//const ButtonContainer = styled.div`
+//width: 80%;
+//align-self: flex-start;
+//
+//@media (max-width: 48em) {
+//    align-self: center;
+//    text-align: center;
+//
+//    button{
+//        margin: 0 auto;
+//    }
+//}
 
-@media (max-width: 48em) {
-    align-self: center;
-    text-align: center;
-
-    button{
-        margin: 0 auto;
-    }
-}
-
-`
-
+//`
+//<ButtonContainer>
+//<Button text="Explore" link="#about"/>
+//</ButtonContainer>
 
 const TypeWriterText = () => {
   return (
@@ -113,9 +115,7 @@ const TypeWriterText = () => {
     
     </Title>
     <Subtitle>Let's go slay some Goblins!</Subtitle>
-    <ButtonContainer>
-    <Button text="Explore" link="#about"/>
-    </ButtonContainer>
+    
  </>
   )
 }
